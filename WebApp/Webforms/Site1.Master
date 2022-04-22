@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApp.Webforms.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="../Style/Site1.css" rel="stylesheet" />
+    <script src="../Code/Site1.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="topnav" id="topnav" runat="server">
+            <a class="topnav1" href="PageMain.aspx">דף ראשי</a></a>
+            <a class="topnav2" href="PageScratch.aspx">כיתה ז- Scratch</a></a>
+            <a class="topnav3" href="PagePython1.aspx">כיתה ח- Python Turtle</a></a>
+            <a class="topnav4" href="PagePython2.aspx">כיתה ט- Python</a></a>
+            <a class="topnav5" id="topnav5" runat="server" href="PageUsers.aspx">משתמשים</a></a>
+        </div>
+        <table class="tblHeader">
+            <tr>
+                <td id="msg" runat="server" style="width: 20%">
+                    <button id="btn" name="btn" onserverclick="btn_logout" runat="server">Logout</button>
+                </td>
+                <td style="width: 60%">
+                </td>
+                <td style="width: 20%">
+                    <%="Wellcome " + Session["userName"]%>
+                </td>
+            </tr>
+        </table>
+        <div id="header_images">
+            <img src="../Images/Scratch.png" />
+            <img src="../Images/TurtlePython3.png" />
+        </div>
+        <div id="header">
+            <h1>מדעי המחשב לחטיבת הביניים</h1>
+            <h3>עמל רב-תחומי ע"ש ניומן - מקיף ז' באר-שבע</h3>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

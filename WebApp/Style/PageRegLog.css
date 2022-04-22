@@ -1,0 +1,59 @@
+﻿.logTable {
+    direction: rtl;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid black;
+    border-collapse: collapse;
+    width: 70%;
+}
+
+#reg1 {
+    visibility: collapse;
+}
+
+#reg2 {
+    visibility: collapse;
+}
+
+#reg3 {
+    visibility: collapse;
+}
+
+#reg4 {
+    visibility: collapse;
+}
+
+#td1 {
+    width: 20%;
+    border: solid black;
+    font-weight: bold;
+}
+
+#td2 {
+    width: 20%;
+    border: solid black;
+}
+
+.valMsg {
+    color: red;
+    width: 20%;
+    border: solid black;
+}
+
+.Submit {
+    font-weight: bold;
+    border: solid;
+    border-width: 3px;
+    border-radius: 3px;
+}
+
+.msgRslt {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+    color: red;
+    width: 40%;
+    text-align: center;
+    overflow-wrap: break-word;
+}

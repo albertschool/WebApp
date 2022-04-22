@@ -1,0 +1,10 @@
+﻿#btnEnter {
+    border: 7px solid black;
+    width: 20%;
+    height: 100px;
+    color: blue;
+    text-align: center;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 32px;
+}
