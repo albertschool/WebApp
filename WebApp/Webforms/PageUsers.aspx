@@ -6,4 +6,7 @@
      <div id="header">
         <h1>רשימת משתמשים</h1>
     </div>
+    <div id="tableDiv" class="tableDiv" runat="server">
+
+    </div>
 </asp:Content>

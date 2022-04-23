@@ -1,3 +1,17 @@
 ﻿h1 {
     font-size: 60px;
 }
+
+.tableDiv {
+    direction: ltr;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid black;
+    width: 80%;
+    border-collapse: collapse;
+}
+
+th {
+    font-weight: bold;
+    background-color: lightgray;
+}

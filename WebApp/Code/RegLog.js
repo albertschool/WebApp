@@ -26,28 +26,6 @@ function validateForm() {
     return res;
 }
 
-function logOrReg() {
-    var btn = document.getElementById("login");
-
-    if (btn.value == "Register") {
-        document.getElementById("reg1").style.visibility = "visible";
-        document.getElementById("reg2").style.visibility = "visible";
-        document.getElementById("reg3").style.visibility = "visible";
-        document.getElementById("reg4").style.visibility = "visible";
-        document.getElementById("reg5").style.visibility = "visible";
-        document.getElementById("reg6").style.visibility = "visible";
-        btn.value = "Login";
-    } else {
-        document.getElementById("reg1").style.visibility = "collapse";
-        document.getElementById("reg2").style.visibility = "collapse";
-        document.getElementById("reg3").style.visibility = "collapse";
-        document.getElementById("reg4").style.visibility = "collapse";
-        document.getElementById("reg5").style.visibility = "collapse";
-        document.getElementById("reg6").style.visibility = "collapse";
-        btn.value = "Register";
-    }
-}
-
 function userNameVal() {
     var userName = document.getElementById("userName").value;
     var msgBox = document.getElementById("userNameMsg");
