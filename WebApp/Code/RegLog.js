@@ -18,6 +18,8 @@ function validateForm() {
     res = passwordVal() && res;
     if (btn.value == "Login") {
         res = confirmFun() && res;
+        res = confirmfName() && res;
+        res = confirmlName() && res;
         res = confirmemail() && res;
         res = confirmPhone() && res;
     }
@@ -32,12 +34,16 @@ function logOrReg() {
         document.getElementById("reg2").style.visibility = "visible";
         document.getElementById("reg3").style.visibility = "visible";
         document.getElementById("reg4").style.visibility = "visible";
+        document.getElementById("reg5").style.visibility = "visible";
+        document.getElementById("reg6").style.visibility = "visible";
         btn.value = "Login";
     } else {
         document.getElementById("reg1").style.visibility = "collapse";
         document.getElementById("reg2").style.visibility = "collapse";
         document.getElementById("reg3").style.visibility = "collapse";
         document.getElementById("reg4").style.visibility = "collapse";
+        document.getElementById("reg5").style.visibility = "collapse";
+        document.getElementById("reg6").style.visibility = "collapse";
         btn.value = "Register";
     }
 }
@@ -71,6 +77,30 @@ function passwordVal() {
     var numChar = /[0-9]/;
     if (!numChar.test(pass)) {
         msgBox.innerHTML = "Password must contain one digit character";
+        return false;
+    }
+    msgBox.innerHTML = "";
+    return true;
+}
+
+function confirmfName() {
+    var pass = document.getElementById("fName").value;
+    var msgBox = document.getElementById("fNameMsg");
+    var numChar = /[0-9]/;
+    if (numChar.test(pass)) {
+        msgBox.innerHTML = "First name can't contain digit";
+        return false;
+    }
+    msgBox.innerHTML = "";
+    return true;
+}
+
+function confirmlName() {
+    var pass = document.getElementById("lName").value;
+    var msgBox = document.getElementById("lNameMsg");
+    var numChar = /[0-9]/;
+    if (numChar.test(pass)) {
+        msgBox.innerHTML = "Last name can't contain digit";
         return false;
     }
     msgBox.innerHTML = "";

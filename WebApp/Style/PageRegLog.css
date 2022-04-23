@@ -23,6 +23,14 @@
     visibility: collapse;
 }
 
+#reg5 {
+    visibility: collapse;
+}
+
+#reg6 {
+    visibility: collapse;
+}
+
 #td1 {
     width: 20%;
     border: solid black;

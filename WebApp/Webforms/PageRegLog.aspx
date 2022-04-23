@@ -27,25 +27,41 @@
             <td id="confirmMsg" class="valMsg"></td>
         </tr>
         <tr id="reg2" visibility="collapse">
+            <td id="td1">שם פרטי</td>
+            <td id="td2">
+                <input type="text" name="fName" id="fName" oninput="confirmfName()" />
+            </td>
+            <td id="fNameMsg" class="valMsg"></td>
+        </tr>
+        <tr id="reg3" visibility="collapse">
+            <td id="td1">שם משפחה</td>
+            <td id="td2">
+                <input type="text" name="lName" id="lName" oninput="confirmlName()" />
+            </td>
+            <td id="lNameMsg" class="valMsg"></td>
+        </tr>
+        <tr id="reg4" visibility="collapse">
             <td id="td1">טלפון</td>
             <td id="td2">
                 <input type="text" name="phone" id="phone" oninput="confirmPhone()" />
             </td>
             <td id="phoneMsg" class="valMsg"></td>
         </tr>
-        <tr id="reg3" visibility="collapse">
+        <tr id="reg5" visibility="collapse">
             <td id="td1">דואר אלקטרוני</td>
             <td id="td2">
                 <input type="text" name="email" id="email" onchange="confirmemail()" />
             </td>
             <td id="emailMsg" class="valMsg"></td>
         </tr>
-        <tr id="reg4" visibility="collapse">
+        <tr id="reg6" visibility="collapse">
             <td id="td1">מגדר</td>
             <td id="td2">
-                <input type="radio" name="gender" value="male"> Male
-                <input type="radio" name="gender" value="female" checked> Female
-                <input type="radio" name="gender" value="other"> Other
+                <select name="gender" id="gender">
+                    <option value="other">אחר</option>
+                    <option value="female">אישה</option>
+                    <option value="male">גבר</option>
+                </select>
             </td>
             <td></td>
         </tr>
