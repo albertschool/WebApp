@@ -13,7 +13,7 @@ namespace WebApp.Webforms
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            InitView();
+            SetLogin();
 
             if (Request.Form["submit"] != null)
             {
@@ -44,19 +44,17 @@ namespace WebApp.Webforms
                 }
                 else
                 {
+                    string conStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True";
+                    SqlConnection con = new SqlConnection(conStr);
                     string SQLStr = $"SELECT * FROM Users " +
                         $"WHERE userName='{Request.Form["userName"]}'";
-                    DataSet ds = RetrieveUsersTable(SQLStr);
+                    SqlCommand cmd = new SqlCommand(SQLStr, con);
+                    SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    adp.Fill(ds, "users");
+
                     if (ds.Tables["users"].Rows.Count == 0)
                     {
-                        string conStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True";
-                        SQLStr = $"SELECT * FROM Users WHERE 0=1";
-                        SqlConnection con = new SqlConnection(conStr);
-                        SqlCommand cmd = new SqlCommand(SQLStr, con);
-                        SqlDataAdapter adp = new SqlDataAdapter(cmd);
-                        ds = new DataSet();
-                        adp.Fill(ds, "users");
-
                         DataRow dr = ds.Tables["users"].NewRow();
                         dr["userName"] = Request.Form["userName"];
                         dr["password"] = Request.Form["password"];
@@ -100,16 +98,6 @@ namespace WebApp.Webforms
             {
                 SetLogin();
             }
-        }
-
-        public void InitView()
-        {
-            reg1.Visible = false;
-            reg2.Visible = false;
-            reg3.Visible = false;
-            reg4.Visible = false;
-            reg5.Visible = false;
-            reg6.Visible = false;
         }
 
         public void SetRegister()

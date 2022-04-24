@@ -24,14 +24,6 @@ namespace WebApp.Webforms
             string table = BuildUsersTable(dt);
             tableDiv.InnerHtml = table;
 
-            //if (!IsPostBack)
-            //{
-            //    string SQLStr = "SELECT * FROM Users";
-            //    DataSet ds = RetrieveUsersTable(SQLStr);
-            //    DataTable dt = ds.Tables["users"];
-            //    string table = BuildUsersTable(dt);
-            //    tableDiv.InnerHtml = table;
-            //}
         }
 
         public DataSet RetrieveUsersTable(String SQLStr)

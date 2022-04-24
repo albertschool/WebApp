@@ -12,10 +12,6 @@ namespace WebApp
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            Application["aName1"] = "al1208";
-            Application["aPass1"] = "a1234567";
-            Application["uName1"] = "ef0609";
-            Application["uPass1"] = "a0123456";
 
         }
 
